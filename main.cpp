@@ -92,7 +92,7 @@ int main() {
         world->update();
         //world->draw(screen);
         world->bots[0]->innerWorld->draw(screen);
-        //updateScreen(window);
+        updateScreen(window);
         handleKeyEvent(&event);
     }
 

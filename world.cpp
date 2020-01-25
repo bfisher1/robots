@@ -59,25 +59,6 @@ string blockAnimName(Block *block) {
     }
 }
 
-DynamicResource::DynamicResource() {
-    //initialize the lock
-    if(pthread_mutex_init(&rsrcLock, NULL) != 0) {
-        printf("Couldn't create monitor.");
-        exit(0);
-    }
-    locked = false;
-}
-
-void DynamicResource::lock() {
-    pthread_mutex_lock(&rsrcLock);
-    locked = true;
-}
-
-void DynamicResource::unlock() {
-    pthread_mutex_unlock(&rsrcLock);
-    locked = false;
-}
-
 
 
 // used for comparing locs, done on a distance basis
@@ -96,7 +77,8 @@ bool World::isCrossable(Loc loc) {
 }
 
 
-void updateTrees(World *world) {
+void updateTrees(void *args) {
+    World *world = (World *) args;
     cout << "Updating trees" << endl;
     world->lock();
     for(auto it = world->trees->begin(); it != world->trees->end(); it++) {
@@ -213,7 +195,7 @@ void World::generateBots() {
     bots.push_back(new Bot(9, 13, this));
 }
 
-void World::draw(SDL_Surface *screen) {
+void World::draw(SDL_Surface *screen, int startX, int startY, int endX, int endY) {
 
     int scale = 32;
 
@@ -225,8 +207,10 @@ void World::draw(SDL_Surface *screen) {
 
     // cout << "-------------" << endl;
 
-    for(int i = int(viewer->x); (i - viewer->x) * scale < viewer->width && i < width; i++) {
-        for(int j = int(viewer->y); (j - viewer->y) * scale < viewer->height && j < height; j++) {
+    //for(int i = int(viewer->x); (i - viewer->x) * scale < viewer->width && i < width; i++) {
+    //    for(int j = int(viewer->y); (j - viewer->y) * scale < viewer->height && j < height; j++) {
+    for(int i = startX; (i - viewer->x) * scale < viewer->width && i < endX; i++) {
+        for(int j = startY; (j - viewer->y) * scale < viewer->height && j < endY; j++) {
 
             // cout << "drawing world " << grid[i][j]->name << endl;
             // if(grid[i][j]->selected) {
@@ -241,6 +225,7 @@ void World::draw(SDL_Surface *screen) {
             }
         }
     }
+
 
     //TODO DRAW BASED OFF OF HEIGHTS in z axis
 

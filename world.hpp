@@ -8,6 +8,7 @@
 #include "block.hpp"
 #include "timer.hpp"
 #include <pthread.h>
+#include "DynamicResource.hpp"
 
 #define DEFAULT_ZOOM 3
 #define DEFAULT_SEED 1
@@ -38,15 +39,6 @@ public:
     Viewer(World *world);
 };
 
-class DynamicResource {
-public:
-    pthread_mutex_t rsrcLock;
-    void lock();
-    void unlock();
-    bool locked;
-    DynamicResource();
-};
-
 class World : public DynamicResource
 {
 public:
@@ -62,7 +54,7 @@ public:
 
     World(int w, int h);
 
-    void draw(SDL_Surface *screen);
+    void draw(SDL_Surface *screen, int startX, int startY, int endX, int endY);
     void setAllBlocks(BlockType type);
     void createStoneBlocks();
     vector<Loc> *createResources(BlockType resourceType, BlockType surroundingType, double cutoff, int seed, double freq, int depth);

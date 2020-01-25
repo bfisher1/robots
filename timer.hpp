@@ -26,8 +26,8 @@ public:
 class IntervalExecutor {
 public:
     Timer *timer;
-    void (*execute)(World *);
-    IntervalExecutor(Timer *timer, void (*)(World *world));
+    void (*execute)(void *);
+    IntervalExecutor(Timer *timer, void (*)(void *world));
 };
 
 /*
@@ -39,11 +39,11 @@ public:
 */
 class IntervalExecutorBus {
 public:
-    World *world;
+    void *world;
     int count;
     map<int, IntervalExecutor*> *intervalExecutors;
-    IntervalExecutorBus(World *world);
-    int addIntervalExecutor(double frequency, void (*)(World *world));
+    IntervalExecutorBus(void *world);
+    int addIntervalExecutor(double frequency, void (*)(void *world));
     void removeIntervalExecutor(int id);
     void checkAndRunExecutors();
 };

@@ -10,7 +10,7 @@
 #include <iostream>
 #include "anim.hpp"
 #include <SDL.h>
-
+#include "AppWindow.hpp"
 
 World *world;
 
@@ -45,16 +45,13 @@ void handleKeyEvent(SDL_Event *event) {
     }
 }
 
-void clearScreen(SDL_Surface *screen) {
-    drawRect(screen, 0, 0, WIDTH, HEIGHT, (Color) {0, 0, 0});
+void drawWorld(void *args) {
+    AppWindow *appWindow = (AppWindow *) args;
+    appWindow->update();
 }
 
 int main() {
-    SDL_Surface *screen = NULL;
-    SDL_Window* window = NULL;
-    SDL_Event event;
 
-    if (SDL_Init(SDL_INIT_VIDEO) < 0 ) exit(EXIT_FAILURE);
 
 //    if (!(screen = SDL_SetVideoMode(WIDTH, HEIGHT, DEPTH, SDL_RESIZABLE|SDL_HWSURFACE)))
 //    {
@@ -62,43 +59,41 @@ int main() {
 //        exit(EXIT_FAILURE);
 //    }
 
-    window = SDL_CreateWindow( "Program", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, WIDTH, HEIGHT, SDL_WINDOW_SHOWN );
-    if( window == NULL )
-    {
-        exit( 0 );
-    }
-    screen = SDL_GetWindowSurface( window );
-    if(screen == NULL) {
-        exit(0);
-    }
-    setAnimScreen(screen);
+
+
+
+    SDL_Event event;
+
+    AppWindow *appWindow = new AppWindow(NULL, WIDTH, HEIGHT);
+    setAnimScreen(appWindow->screen);
 
     world = new World(256, 256);
     world->generateBots();
+
+    appWindow->world = world;
 
     //ResourceGraph *resources = new ResourceGraph("resources.txt");
     //resources->print();
 
     // MAKE EVENT BUS OF TIMERS, things subscribe to world
 
+    IntervalExecutorBus *appWindowDraw = new IntervalExecutorBus(appWindow);
+    appWindowDraw->addIntervalExecutor(1/30, drawWorld);
+
+
+
     while(true) {
-        //Get window surface
 
+        //time_t now;
+        //time(&now);
 
-        //Fill the surface white
-       // SDL_FillRect( screen, NULL, SDL_MapRGB( screen->format, 0xFF, 0xFF, 0xFF ) );
-
-        clearScreen(screen);
+        //clearScreen(appWindow->screen);
         world->update();
-        //world->draw(screen);
-        world->bots[0]->innerWorld->draw(screen);
-        updateScreen(window);
+        //appWindowDraw->world = appWindow;
+        appWindowDraw->checkAndRunExecutors();
+        //appWindow->update();
+        //world->bots[0]->innerWorld->draw(appWindow->screen);
+        //updateScreen(appWindow->window);
         handleKeyEvent(&event);
     }
-
-    //Destroy window
-    SDL_DestroyWindow( window );
-
-    //Quit SDL subsystems
-    SDL_Quit();
 }

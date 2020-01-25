@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/robots.dir/AppWindow.cpp.o"
+  "CMakeFiles/robots.dir/DynamicResource.cpp.o"
   "CMakeFiles/robots.dir/anim.cpp.o"
   "CMakeFiles/robots.dir/block.cpp.o"
   "CMakeFiles/robots.dir/bot.cpp.o"

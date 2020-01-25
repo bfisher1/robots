@@ -15,18 +15,18 @@ bool Timer::ready() {
 }
 
 
-IntervalExecutor::IntervalExecutor(Timer *t, void (*exec)(World *world)) {
+IntervalExecutor::IntervalExecutor(Timer *t, void (*exec)(void *world)) {
     timer = t;
     execute = exec;
 }
 
 
-IntervalExecutorBus::IntervalExecutorBus(World *w) {
+IntervalExecutorBus::IntervalExecutorBus(void *w) {
     intervalExecutors = new map<int, IntervalExecutor *>();
     world = w;
 }
 
-int IntervalExecutorBus::addIntervalExecutor(double frequency, void (*exec)(World *world)) {
+int IntervalExecutorBus::addIntervalExecutor(double frequency, void (*exec)(void *world)) {
     (*intervalExecutors)[count] = new IntervalExecutor(new Timer(frequency), exec);
     count++;
     return count - 1;

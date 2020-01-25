@@ -13,5 +13,5 @@ include_directories(SDL2Test ${SDL2_INCLUDE_DIRS})
 
 
 
-add_executable(robots main.cpp graphics.c graphics.h direction.cpp loc.cpp util.cpp util.hpp anim.cpp anim.hpp world.cpp world.hpp perlin.c perlin.h bot.cpp bot.hpp resourceGraph.cpp resourceGraph.hpp navigate.cpp navigate.hpp innerWorld.cpp innerWorld.hpp block.cpp block.hpp timer.cpp timer.hpp explore.cpp explore.hpp path.cpp path.hpp)
+add_executable(robots main.cpp graphics.c graphics.h direction.cpp loc.cpp util.cpp util.hpp anim.cpp anim.hpp world.cpp world.hpp perlin.c perlin.h bot.cpp bot.hpp resourceGraph.cpp resourceGraph.hpp navigate.cpp navigate.hpp innerWorld.cpp innerWorld.hpp block.cpp block.hpp timer.cpp timer.hpp explore.cpp explore.hpp path.cpp path.hpp AppWindow.cpp AppWindow.hpp DynamicResource.cpp DynamicResource.hpp)
 target_link_libraries(robots ${SDL2_LIBRARIES} "-lX11" "-lpthread" "-lSDL" )

@@ -123,6 +123,60 @@ robots/fast:
 	$(MAKE) -f CMakeFiles/robots.dir/build.make CMakeFiles/robots.dir/build
 .PHONY : robots/fast
 
+AppWindow.o: AppWindow.cpp.o
+
+.PHONY : AppWindow.o
+
+# target to build an object file
+AppWindow.cpp.o:
+	$(MAKE) -f CMakeFiles/robots.dir/build.make CMakeFiles/robots.dir/AppWindow.cpp.o
+.PHONY : AppWindow.cpp.o
+
+AppWindow.i: AppWindow.cpp.i
+
+.PHONY : AppWindow.i
+
+# target to preprocess a source file
+AppWindow.cpp.i:
+	$(MAKE) -f CMakeFiles/robots.dir/build.make CMakeFiles/robots.dir/AppWindow.cpp.i
+.PHONY : AppWindow.cpp.i
+
+AppWindow.s: AppWindow.cpp.s
+
+.PHONY : AppWindow.s
+
+# target to generate assembly for a file
+AppWindow.cpp.s:
+	$(MAKE) -f CMakeFiles/robots.dir/build.make CMakeFiles/robots.dir/AppWindow.cpp.s
+.PHONY : AppWindow.cpp.s
+
+DynamicResource.o: DynamicResource.cpp.o
+
+.PHONY : DynamicResource.o
+
+# target to build an object file
+DynamicResource.cpp.o:
+	$(MAKE) -f CMakeFiles/robots.dir/build.make CMakeFiles/robots.dir/DynamicResource.cpp.o
+.PHONY : DynamicResource.cpp.o
+
+DynamicResource.i: DynamicResource.cpp.i
+
+.PHONY : DynamicResource.i
+
+# target to preprocess a source file
+DynamicResource.cpp.i:
+	$(MAKE) -f CMakeFiles/robots.dir/build.make CMakeFiles/robots.dir/DynamicResource.cpp.i
+.PHONY : DynamicResource.cpp.i
+
+DynamicResource.s: DynamicResource.cpp.s
+
+.PHONY : DynamicResource.s
+
+# target to generate assembly for a file
+DynamicResource.cpp.s:
+	$(MAKE) -f CMakeFiles/robots.dir/build.make CMakeFiles/robots.dir/DynamicResource.cpp.s
+.PHONY : DynamicResource.cpp.s
+
 anim.o: anim.cpp.o
 
 .PHONY : anim.o
@@ -564,6 +618,12 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... robots"
 	@echo "... edit_cache"
+	@echo "... AppWindow.o"
+	@echo "... AppWindow.i"
+	@echo "... AppWindow.s"
+	@echo "... DynamicResource.o"
+	@echo "... DynamicResource.i"
+	@echo "... DynamicResource.s"
 	@echo "... anim.o"
 	@echo "... anim.i"
 	@echo "... anim.s"

@@ -6,6 +6,26 @@
 
 #IncludeRegexTransform: 
 
+/home/ben/robots/AppWindow.cpp
+AppWindow.hpp
+/home/ben/robots/AppWindow.hpp
+util.hpp
+/home/ben/robots/util.hpp
+
+/home/ben/robots/AppWindow.hpp
+SDL.h
+-
+pthread.h
+-
+vector
+-
+world.hpp
+/home/ben/robots/world.hpp
+
+/home/ben/robots/DynamicResource.hpp
+pthread.h
+-
+
 /home/ben/robots/anim.hpp
 SDL.h
 -
@@ -105,6 +125,8 @@ anim.hpp
 /home/ben/robots/anim.hpp
 SDL.h
 -
+AppWindow.hpp
+/home/ben/robots/AppWindow.hpp
 
 /home/ben/robots/navigate.hpp
 loc.hpp
@@ -165,6 +187,8 @@ timer.hpp
 /home/ben/robots/timer.hpp
 pthread.h
 -
+DynamicResource.hpp
+/home/ben/robots/DynamicResource.hpp
 
 /usr/include/SDL2/SDL.h
 SDL_main.h

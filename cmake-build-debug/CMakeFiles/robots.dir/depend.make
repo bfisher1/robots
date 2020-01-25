@@ -53,6 +53,70 @@ CMakeFiles/robots.dir/graphics.c.o: /usr/include/SDL2/close_code.h
 CMakeFiles/robots.dir/perlin.c.o: ../perlin.c
 CMakeFiles/robots.dir/perlin.c.o: ../perlin.h
 
+CMakeFiles/robots.dir/AppWindow.cpp.o: ../AppWindow.cpp
+CMakeFiles/robots.dir/AppWindow.cpp.o: ../AppWindow.hpp
+CMakeFiles/robots.dir/AppWindow.cpp.o: ../DynamicResource.hpp
+CMakeFiles/robots.dir/AppWindow.cpp.o: ../anim.hpp
+CMakeFiles/robots.dir/AppWindow.cpp.o: ../block.hpp
+CMakeFiles/robots.dir/AppWindow.cpp.o: ../bot.hpp
+CMakeFiles/robots.dir/AppWindow.cpp.o: ../direction.hpp
+CMakeFiles/robots.dir/AppWindow.cpp.o: ../explore.hpp
+CMakeFiles/robots.dir/AppWindow.cpp.o: ../graphics.h
+CMakeFiles/robots.dir/AppWindow.cpp.o: ../innerWorld.hpp
+CMakeFiles/robots.dir/AppWindow.cpp.o: ../loc.hpp
+CMakeFiles/robots.dir/AppWindow.cpp.o: ../navigate.hpp
+CMakeFiles/robots.dir/AppWindow.cpp.o: ../path.hpp
+CMakeFiles/robots.dir/AppWindow.cpp.o: ../timer.hpp
+CMakeFiles/robots.dir/AppWindow.cpp.o: ../util.hpp
+CMakeFiles/robots.dir/AppWindow.cpp.o: ../world.hpp
+CMakeFiles/robots.dir/AppWindow.cpp.o: /usr/include/SDL2/SDL.h
+CMakeFiles/robots.dir/AppWindow.cpp.o: /usr/include/SDL2/SDL_assert.h
+CMakeFiles/robots.dir/AppWindow.cpp.o: /usr/include/SDL2/SDL_atomic.h
+CMakeFiles/robots.dir/AppWindow.cpp.o: /usr/include/SDL2/SDL_audio.h
+CMakeFiles/robots.dir/AppWindow.cpp.o: /usr/include/SDL2/SDL_blendmode.h
+CMakeFiles/robots.dir/AppWindow.cpp.o: /usr/include/SDL2/SDL_clipboard.h
+CMakeFiles/robots.dir/AppWindow.cpp.o: /usr/include/SDL2/SDL_config.h
+CMakeFiles/robots.dir/AppWindow.cpp.o: /usr/include/SDL2/SDL_cpuinfo.h
+CMakeFiles/robots.dir/AppWindow.cpp.o: /usr/include/SDL2/SDL_endian.h
+CMakeFiles/robots.dir/AppWindow.cpp.o: /usr/include/SDL2/SDL_error.h
+CMakeFiles/robots.dir/AppWindow.cpp.o: /usr/include/SDL2/SDL_events.h
+CMakeFiles/robots.dir/AppWindow.cpp.o: /usr/include/SDL2/SDL_filesystem.h
+CMakeFiles/robots.dir/AppWindow.cpp.o: /usr/include/SDL2/SDL_gamecontroller.h
+CMakeFiles/robots.dir/AppWindow.cpp.o: /usr/include/SDL2/SDL_gesture.h
+CMakeFiles/robots.dir/AppWindow.cpp.o: /usr/include/SDL2/SDL_haptic.h
+CMakeFiles/robots.dir/AppWindow.cpp.o: /usr/include/SDL2/SDL_hints.h
+CMakeFiles/robots.dir/AppWindow.cpp.o: /usr/include/SDL2/SDL_joystick.h
+CMakeFiles/robots.dir/AppWindow.cpp.o: /usr/include/SDL2/SDL_keyboard.h
+CMakeFiles/robots.dir/AppWindow.cpp.o: /usr/include/SDL2/SDL_keycode.h
+CMakeFiles/robots.dir/AppWindow.cpp.o: /usr/include/SDL2/SDL_loadso.h
+CMakeFiles/robots.dir/AppWindow.cpp.o: /usr/include/SDL2/SDL_log.h
+CMakeFiles/robots.dir/AppWindow.cpp.o: /usr/include/SDL2/SDL_main.h
+CMakeFiles/robots.dir/AppWindow.cpp.o: /usr/include/SDL2/SDL_messagebox.h
+CMakeFiles/robots.dir/AppWindow.cpp.o: /usr/include/SDL2/SDL_mouse.h
+CMakeFiles/robots.dir/AppWindow.cpp.o: /usr/include/SDL2/SDL_mutex.h
+CMakeFiles/robots.dir/AppWindow.cpp.o: /usr/include/SDL2/SDL_pixels.h
+CMakeFiles/robots.dir/AppWindow.cpp.o: /usr/include/SDL2/SDL_platform.h
+CMakeFiles/robots.dir/AppWindow.cpp.o: /usr/include/SDL2/SDL_power.h
+CMakeFiles/robots.dir/AppWindow.cpp.o: /usr/include/SDL2/SDL_quit.h
+CMakeFiles/robots.dir/AppWindow.cpp.o: /usr/include/SDL2/SDL_rect.h
+CMakeFiles/robots.dir/AppWindow.cpp.o: /usr/include/SDL2/SDL_render.h
+CMakeFiles/robots.dir/AppWindow.cpp.o: /usr/include/SDL2/SDL_rwops.h
+CMakeFiles/robots.dir/AppWindow.cpp.o: /usr/include/SDL2/SDL_scancode.h
+CMakeFiles/robots.dir/AppWindow.cpp.o: /usr/include/SDL2/SDL_shape.h
+CMakeFiles/robots.dir/AppWindow.cpp.o: /usr/include/SDL2/SDL_stdinc.h
+CMakeFiles/robots.dir/AppWindow.cpp.o: /usr/include/SDL2/SDL_surface.h
+CMakeFiles/robots.dir/AppWindow.cpp.o: /usr/include/SDL2/SDL_system.h
+CMakeFiles/robots.dir/AppWindow.cpp.o: /usr/include/SDL2/SDL_thread.h
+CMakeFiles/robots.dir/AppWindow.cpp.o: /usr/include/SDL2/SDL_timer.h
+CMakeFiles/robots.dir/AppWindow.cpp.o: /usr/include/SDL2/SDL_touch.h
+CMakeFiles/robots.dir/AppWindow.cpp.o: /usr/include/SDL2/SDL_version.h
+CMakeFiles/robots.dir/AppWindow.cpp.o: /usr/include/SDL2/SDL_video.h
+CMakeFiles/robots.dir/AppWindow.cpp.o: /usr/include/SDL2/begin_code.h
+CMakeFiles/robots.dir/AppWindow.cpp.o: /usr/include/SDL2/close_code.h
+
+CMakeFiles/robots.dir/DynamicResource.cpp.o: ../DynamicResource.cpp
+CMakeFiles/robots.dir/DynamicResource.cpp.o: ../DynamicResource.hpp
+
 CMakeFiles/robots.dir/anim.cpp.o: ../anim.cpp
 CMakeFiles/robots.dir/anim.cpp.o: ../anim.hpp
 CMakeFiles/robots.dir/anim.cpp.o: ../direction.hpp
@@ -155,6 +219,7 @@ CMakeFiles/robots.dir/block.cpp.o: /usr/include/SDL2/SDL_video.h
 CMakeFiles/robots.dir/block.cpp.o: /usr/include/SDL2/begin_code.h
 CMakeFiles/robots.dir/block.cpp.o: /usr/include/SDL2/close_code.h
 
+CMakeFiles/robots.dir/bot.cpp.o: ../DynamicResource.hpp
 CMakeFiles/robots.dir/bot.cpp.o: ../anim.hpp
 CMakeFiles/robots.dir/bot.cpp.o: ../block.hpp
 CMakeFiles/robots.dir/bot.cpp.o: ../bot.cpp
@@ -218,6 +283,7 @@ CMakeFiles/robots.dir/direction.cpp.o: ../direction.cpp
 CMakeFiles/robots.dir/direction.cpp.o: ../direction.hpp
 CMakeFiles/robots.dir/direction.cpp.o: ../loc.hpp
 
+CMakeFiles/robots.dir/explore.cpp.o: ../DynamicResource.hpp
 CMakeFiles/robots.dir/explore.cpp.o: ../anim.hpp
 CMakeFiles/robots.dir/explore.cpp.o: ../block.hpp
 CMakeFiles/robots.dir/explore.cpp.o: ../bot.hpp
@@ -277,6 +343,7 @@ CMakeFiles/robots.dir/explore.cpp.o: /usr/include/SDL2/SDL_video.h
 CMakeFiles/robots.dir/explore.cpp.o: /usr/include/SDL2/begin_code.h
 CMakeFiles/robots.dir/explore.cpp.o: /usr/include/SDL2/close_code.h
 
+CMakeFiles/robots.dir/innerWorld.cpp.o: ../DynamicResource.hpp
 CMakeFiles/robots.dir/innerWorld.cpp.o: ../anim.hpp
 CMakeFiles/robots.dir/innerWorld.cpp.o: ../block.hpp
 CMakeFiles/robots.dir/innerWorld.cpp.o: ../bot.hpp
@@ -339,6 +406,8 @@ CMakeFiles/robots.dir/loc.cpp.o: ../loc.cpp
 CMakeFiles/robots.dir/loc.cpp.o: ../loc.hpp
 CMakeFiles/robots.dir/loc.cpp.o: ../util.hpp
 
+CMakeFiles/robots.dir/main.cpp.o: ../AppWindow.hpp
+CMakeFiles/robots.dir/main.cpp.o: ../DynamicResource.hpp
 CMakeFiles/robots.dir/main.cpp.o: ../anim.hpp
 CMakeFiles/robots.dir/main.cpp.o: ../block.hpp
 CMakeFiles/robots.dir/main.cpp.o: ../bot.hpp
@@ -399,6 +468,7 @@ CMakeFiles/robots.dir/main.cpp.o: /usr/include/SDL2/SDL_video.h
 CMakeFiles/robots.dir/main.cpp.o: /usr/include/SDL2/begin_code.h
 CMakeFiles/robots.dir/main.cpp.o: /usr/include/SDL2/close_code.h
 
+CMakeFiles/robots.dir/navigate.cpp.o: ../DynamicResource.hpp
 CMakeFiles/robots.dir/navigate.cpp.o: ../anim.hpp
 CMakeFiles/robots.dir/navigate.cpp.o: ../block.hpp
 CMakeFiles/robots.dir/navigate.cpp.o: ../bot.hpp
@@ -458,6 +528,7 @@ CMakeFiles/robots.dir/navigate.cpp.o: /usr/include/SDL2/SDL_video.h
 CMakeFiles/robots.dir/navigate.cpp.o: /usr/include/SDL2/begin_code.h
 CMakeFiles/robots.dir/navigate.cpp.o: /usr/include/SDL2/close_code.h
 
+CMakeFiles/robots.dir/path.cpp.o: ../DynamicResource.hpp
 CMakeFiles/robots.dir/path.cpp.o: ../anim.hpp
 CMakeFiles/robots.dir/path.cpp.o: ../block.hpp
 CMakeFiles/robots.dir/path.cpp.o: ../bot.hpp
@@ -519,6 +590,7 @@ CMakeFiles/robots.dir/path.cpp.o: /usr/include/SDL2/close_code.h
 CMakeFiles/robots.dir/resourceGraph.cpp.o: ../resourceGraph.cpp
 CMakeFiles/robots.dir/resourceGraph.cpp.o: ../resourceGraph.hpp
 
+CMakeFiles/robots.dir/timer.cpp.o: ../DynamicResource.hpp
 CMakeFiles/robots.dir/timer.cpp.o: ../anim.hpp
 CMakeFiles/robots.dir/timer.cpp.o: ../block.hpp
 CMakeFiles/robots.dir/timer.cpp.o: ../bot.hpp
@@ -580,6 +652,7 @@ CMakeFiles/robots.dir/timer.cpp.o: /usr/include/SDL2/close_code.h
 CMakeFiles/robots.dir/util.cpp.o: ../util.cpp
 CMakeFiles/robots.dir/util.cpp.o: ../util.hpp
 
+CMakeFiles/robots.dir/world.cpp.o: ../DynamicResource.hpp
 CMakeFiles/robots.dir/world.cpp.o: ../anim.hpp
 CMakeFiles/robots.dir/world.cpp.o: ../block.hpp
 CMakeFiles/robots.dir/world.cpp.o: ../bot.hpp

@@ -88,6 +88,18 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/ben/robots/AppWindow.cpp">
+			<Option target="robots"/>
+		</Unit>
+		<Unit filename="/home/ben/robots/AppWindow.hpp">
+			<Option target="robots"/>
+		</Unit>
+		<Unit filename="/home/ben/robots/DynamicResource.cpp">
+			<Option target="robots"/>
+		</Unit>
+		<Unit filename="/home/ben/robots/DynamicResource.hpp">
+			<Option target="robots"/>
+		</Unit>
 		<Unit filename="/home/ben/robots/anim.cpp">
 			<Option target="robots"/>
 		</Unit>

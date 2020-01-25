@@ -10,8 +10,11 @@
 class DynamicResource {
 public:
     pthread_mutex_t rsrcLock;
+    pthread_cond_t cond;
     void lock();
     void unlock();
+    void wait();
+    void carryOn();
     bool locked;
     DynamicResource();
 };

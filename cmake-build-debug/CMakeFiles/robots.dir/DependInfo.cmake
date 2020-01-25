@@ -16,6 +16,8 @@ set(CMAKE_C_TARGET_INCLUDE_PATH
   "/usr/include/SDL2"
   )
 set(CMAKE_DEPENDS_CHECK_CXX
+  "/home/ben/robots/AppWindow.cpp" "/home/ben/robots/cmake-build-debug/CMakeFiles/robots.dir/AppWindow.cpp.o"
+  "/home/ben/robots/DynamicResource.cpp" "/home/ben/robots/cmake-build-debug/CMakeFiles/robots.dir/DynamicResource.cpp.o"
   "/home/ben/robots/anim.cpp" "/home/ben/robots/cmake-build-debug/CMakeFiles/robots.dir/anim.cpp.o"
   "/home/ben/robots/block.cpp" "/home/ben/robots/cmake-build-debug/CMakeFiles/robots.dir/block.cpp.o"
   "/home/ben/robots/bot.cpp" "/home/ben/robots/cmake-build-debug/CMakeFiles/robots.dir/bot.cpp.o"

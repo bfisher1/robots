@@ -29,7 +29,7 @@ void *execBot(void *arg) {
 void Bot::exec() {
     while(true) {
         cout << "-            Updatiing" << dir << endl;
-        dir += .00000001;
+        dir += .00001;
         update();
 
     }
@@ -41,12 +41,12 @@ Mob::Mob(World *world) {
 }
 
 void Mob::start() {
-    /*
+
     if ( pthread_create( &thread, NULL, execBot, this) != 0) {
         printf("Couldn't create thread for mob\n");
         exit(0);
     }
-     */
+
     started = true;
 }
 

@@ -46,6 +46,7 @@ void handleKeyEvent(SDL_Event *event) {
 }
 
 void drawWorld(void *args) {
+    int x;
     AppWindow *appWindow = (AppWindow *) args;
     appWindow->update();
 }
@@ -78,7 +79,7 @@ int main() {
     // MAKE EVENT BUS OF TIMERS, things subscribe to world
 
     IntervalExecutorBus *appWindowDraw = new IntervalExecutorBus(appWindow);
-    appWindowDraw->addIntervalExecutor(1/30, drawWorld);
+    appWindowDraw->addIntervalExecutor(1.0/30.0, drawWorld);
 
 
 

@@ -19,7 +19,7 @@ class InnerWorld;
 class Mob {
 public:
     //static vector<Mob *> *mobs;
-    //pthread_t thread;
+    pthread_t thread;
     World *world;
     Mob(World *world);
     bool started;

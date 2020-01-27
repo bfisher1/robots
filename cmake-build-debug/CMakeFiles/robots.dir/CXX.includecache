@@ -6,24 +6,10 @@
 
 #IncludeRegexTransform: 
 
-/home/ben/robots/AppWindow.cpp
-AppWindow.hpp
-/home/ben/robots/AppWindow.hpp
-util.hpp
-/home/ben/robots/util.hpp
-
-/home/ben/robots/AppWindow.hpp
-SDL.h
--
-pthread.h
--
-vector
--
-world.hpp
-/home/ben/robots/world.hpp
-
 /home/ben/robots/DynamicResource.hpp
 pthread.h
+-
+string
 -
 
 /home/ben/robots/anim.hpp
@@ -50,6 +36,20 @@ anim.hpp
 time.h
 -
 iostream
+-
+
+/home/ben/robots/bot.cpp
+bot.hpp
+/home/ben/robots/bot.hpp
+util.hpp
+/home/ben/robots/util.hpp
+iostream
+-
+anim.hpp
+/home/ben/robots/anim.hpp
+direction.hpp
+/home/ben/robots/direction.hpp
+unistd.h
 -
 
 /home/ben/robots/bot.hpp
@@ -106,28 +106,6 @@ set
 string
 -
 
-/home/ben/robots/main.cpp
-stdlib.h
--
-math.h
--
-graphics.h
-/home/ben/robots/graphics.h
-world.hpp
-/home/ben/robots/world.hpp
-resourceGraph.hpp
-/home/ben/robots/resourceGraph.hpp
-util.hpp
-/home/ben/robots/util.hpp
-iostream
--
-anim.hpp
-/home/ben/robots/anim.hpp
-SDL.h
--
-AppWindow.hpp
-/home/ben/robots/AppWindow.hpp
-
 /home/ben/robots/navigate.hpp
 loc.hpp
 /home/ben/robots/loc.hpp
@@ -145,16 +123,6 @@ vector
 -
 bot.hpp
 /home/ben/robots/bot.hpp
-
-/home/ben/robots/resourceGraph.hpp
-string
--
-vector
--
-map
--
-resourceGraph.hpp
-/home/ben/robots/resourceGraph.hpp
 
 /home/ben/robots/timer.hpp
 time.h

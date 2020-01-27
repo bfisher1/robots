@@ -29,6 +29,8 @@ public:
     World *world;
     int width, height;
     std::vector <AppWindowThread*> workers;
+    DynamicResource *uiLock;
+    // only support for 1 thread right now
     AppWindow(World *world, int width, int height, int threads=1);
     void clearScreen();
     void update();

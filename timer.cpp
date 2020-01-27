@@ -10,7 +10,7 @@ void Timer::reset() {
 }
 
 bool Timer::ready() {
-    double time_diff = (clock() - last_updated) / CLOCKS_PER_SEC;
+    double time_diff = (clock() - last_updated) / (double) CLOCKS_PER_SEC;
     return time_diff >= length;
 }
 

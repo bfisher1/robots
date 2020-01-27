@@ -80,13 +80,11 @@ bool World::isCrossable(Loc loc) {
 void updateTrees(void *args) {
     World *world = (World *) args;
     cout << "Updating trees" << endl;
-    world->lock();
     for(auto it = world->trees->begin(); it != world->trees->end(); it++) {
         if(randNorm() <= TREE_AGE_CHANCE) {
             it->second->ageTree();
         }
     }
-    world->unlock();
 }
 
 void setBlockAnims(World *world) {
@@ -209,13 +207,21 @@ void World::draw(SDL_Surface *screen, int startX, int startY, int endX, int endY
 
     //for(int i = int(viewer->x); (i - viewer->x) * scale < viewer->width && i < width; i++) {
     //    for(int j = int(viewer->y); (j - viewer->y) * scale < viewer->height && j < height; j++) {
+    int c = 0;
+    int ii;
+    int jj;
     for(int i = startX; (i - viewer->x) * scale < viewer->width && i < endX; i++) {
         for(int j = startY; (j - viewer->y) * scale < viewer->height && j < endY; j++) {
+
+            ii = i - startX;
+            jj = j - startY;
 
             // cout << "drawing world " << grid[i][j]->name << endl;
             // if(grid[i][j]->selected) {
             //   cout << "selected" << endl;
             // }
+
+            c++;
 
 
             if(grid[i][j]->type == BlockType::tree) {
@@ -225,6 +231,9 @@ void World::draw(SDL_Surface *screen, int startX, int startY, int endX, int endY
             }
         }
     }
+
+    if(c != 783)
+        cout << "total " << c << endl;
 
 
     //TODO DRAW BASED OFF OF HEIGHTS in z axis
@@ -243,6 +252,8 @@ void World::draw(SDL_Surface *screen, int startX, int startY, int endX, int endY
 }
 
 void World::update() {
+    lock("world lock world");
+    viewer->y += .01;
     for(int i = 0; i < bots.size(); i++) {
         if(!bots[i]->started) {
             bots[i]->start();
@@ -250,6 +261,8 @@ void World::update() {
         //bots[i]->update();
     }
     timerBus->checkAndRunExecutors();
+    unlock("world unlock world");
+    //carryOn();
 }
 
 Viewer::Viewer(World *w) {
@@ -280,6 +293,8 @@ void Viewer::handleKeyUpEvent(SDL_Event *event) {
     }
 }
 void Viewer::handleKeyDownEvent(SDL_Event *event) {
+    world->lock("viewer locking world");
+    //cout << "       Viewer has world lock" << endl;
     switch(event->key.keysym.sym) {
         case SDLK_LEFTBRACKET:
         case SDLK_RIGHTBRACKET:
@@ -308,4 +323,5 @@ void Viewer::handleKeyDownEvent(SDL_Event *event) {
         default:
             break;
     }
+    world->unlock("viewer unlock world");
 }
